@@ -49,6 +49,22 @@
         };
     };
 
+    macros {
+        macro_01: macro_01 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp J &kp J &kp N7 &kp N9 &kp N3 &kp N9 &kp N8>;
+            label = "MACRO_01";
+        };
+
+        macro_02: macro_02 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp T &kp LS(E) &kp LS(S) &kp LS(T) &kp N0 &kp N5 &kp N0 &kp N2>;
+            label = "MACRO_02";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -67,11 +83,11 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
-&trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
-&trans      &kp TILDE        &trans          &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &trans
-&kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
+&kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5      &mmv MOVE_UP     &kp F6     &kp F7           &kp F8      &kp F9     &kp F10           &trans
+&trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4    &mmv MOVE_DOWN   &kp PG_UP  &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
+&trans      &kp TILDE        &trans          &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &mkp MB5    &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &mo 2       &mmv MOVE_RIGHT  &mo 4      &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &trans
+&kp C_MUTE  &trans           &trans          &trans           &trans           &trans      &mkp LCLK        &trans     &trans           &trans      &trans     &trans
             >;
 
             display-name = "layer1";
